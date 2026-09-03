@@ -3,10 +3,35 @@
  * Connects React frontend to FastAPI backend endpoints.
  */
 
-const API_BASE_URL = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_API_BASE_URL) ? import.meta.env.VITE_API_BASE_URL : 'http://localhost:8000';
+function getSanitizedApiBaseUrl() {
+  let raw = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_API_BASE_URL)
+    ? import.meta.env.VITE_API_BASE_URL
+    : '';
+
+  if (!raw) {
+    if (typeof window !== 'undefined' && window.location.hostname.includes('vercel.app')) {
+      return 'https://disaster-evacuation-route-optimizer.onrender.com/api';
+    }
+    return 'http://localhost:8000/api';
+  }
+
+  let clean = raw.trim().replace(/\/+$/, '');
+
+  if (clean.endsWith('/api/v1')) {
+    clean = clean.substring(0, clean.length - 3); // convert /api/v1 -> /api
+  }
+
+  if (!clean.endsWith('/api')) {
+    clean = `${clean}/api`;
+  }
+
+  return clean;
+}
 
 async function request(endpoint, options = {}) {
-  const url = `${API_BASE_URL}${endpoint}`;
+  const baseUrl = getSanitizedApiBaseUrl();
+  const cleanEndpoint = endpoint.startsWith('/') ? endpoint : `/${endpoint}`;
+  const url = `${baseUrl}${cleanEndpoint}`;
   const config = {
     ...options,
     headers: {
@@ -39,7 +64,7 @@ async function request(endpoint, options = {}) {
     return data;
   } catch (error) {
     if (!error.status) {
-      error.message = error.message || 'Unable to connect to backend server. Please verify backend is running on port 8000.';
+      error.message = error.message || 'Unable to connect to backend server. Please verify backend is running.';
     }
     throw error;
   }
