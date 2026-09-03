@@ -34,6 +34,7 @@ class Settings:
                     pass
             return [origin.strip() for origin in raw_cors.split(",") if origin.strip()]
         return [
+            "https://disaster-evacuation-route-optimizer.vercel.app",
             "http://localhost:5173",
             "http://127.0.0.1:5173",
             "http://localhost:4173",
