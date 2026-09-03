@@ -1,0 +1,237 @@
+{
+  "incidents": [
+    {
+      "id": "DISASTER-CCF97B",
+      "title": "High Water Level Flood on Road R7",
+      "description": "Water accumulation near Node B and Node E.",
+      "disaster_type": "FLOOD",
+      "severity": 0.8,
+      "status": "RESOLVED",
+      "reported_by": "Civilian User John",
+      "reporter_type": "Civilian",
+      "created_at": "2026-09-02T18:41:27.192369+00:00",
+      "updated_at": "2026-09-02T18:41:27.293775+00:00",
+      "reviewed_by": "Admin Controller",
+      "reviewed_at": "2026-09-02T18:41:27.293775+00:00",
+      "admin_notes": "Flood cleared.",
+      "affected_nodes_json": "[\"B\", \"E\"]",
+      "affected_roads_json": "[\"R7\"]"
+    },
+    {
+      "id": "DISASTER-8C0743",
+      "title": "earthquake",
+      "description": "high chances of earth quake on road r1 and r3",
+      "disaster_type": "EARTHQUAKE",
+      "severity": 0.75,
+      "status": "RESOLVED",
+      "reported_by": "EOC Controller",
+      "reporter_type": "Admin",
+      "created_at": "2026-09-03T02:56:42.618627+00:00",
+      "updated_at": "2026-09-03T02:57:02.979674+00:00",
+      "reviewed_by": "Admin Controller",
+      "reviewed_at": "2026-09-03T02:57:02.979674+00:00",
+      "admin_notes": "Incident resolved & hazards cleared by field team.",
+      "affected_nodes_json": "[\"A\", \"B\", \"D\"]",
+      "affected_roads_json": "[\"R1\", \"R3\"]"
+    },
+    {
+      "id": "DISASTER-46C42C",
+      "title": "flood",
+      "description": "werte",
+      "disaster_type": "HEAVY_RAINFALL",
+      "severity": 0.75,
+      "status": "RESOLVED",
+      "reported_by": "EOC Controller",
+      "reporter_type": "Admin",
+      "created_at": "2026-09-03T02:58:13.783752+00:00",
+      "updated_at": "2026-09-03T02:58:41.603181+00:00",
+      "reviewed_by": "Admin Controller",
+      "reviewed_at": "2026-09-03T02:58:41.603181+00:00",
+      "admin_notes": "Incident resolved & hazards cleared by field team.",
+      "affected_nodes_json": "[\"C\", \"D\"]",
+      "affected_roads_json": "[\"R4\"]"
+    },
+    {
+      "id": "DISASTER-889E6D",
+      "title": "Test Heavy Rainfall Report",
+      "description": "Heavy downpour flooding access route R2",
+      "disaster_type": "HEAVY_RAINFALL",
+      "severity": 0.7,
+      "status": "RESOLVED",
+      "reported_by": "Test Civilian",
+      "reporter_type": "Civilian",
+      "created_at": "2026-09-03T04:16:09.035720+00:00",
+      "updated_at": "2026-09-03T04:16:13.162720+00:00",
+      "reviewed_by": "Admin Controller",
+      "reviewed_at": "2026-09-03T04:16:13.162720+00:00",
+      "admin_notes": "Cleared test hazard",
+      "affected_nodes_json": "[\"B\", \"C\"]",
+      "affected_roads_json": "[\"R2\"]"
+    },
+    {
+      "id": "DISASTER-F28017",
+      "title": "landslide ",
+      "description": "abcfgrt",
+      "disaster_type": "LANDSLIDE",
+      "severity": 0.85,
+      "status": "APPROVED",
+      "reported_by": "EOC Controller",
+      "reporter_type": "Admin",
+      "created_at": "2026-09-03T05:25:39.311669+00:00",
+      "updated_at": "2026-09-03T05:25:39.311669+00:00",
+      "reviewed_by": "Admin EOC",
+      "reviewed_at": "2026-09-03T05:25:39.311669+00:00",
+      "admin_notes": "Automatically approved (Admin submission)",
+      "affected_nodes_json": "[\"A\", \"D\", \"B\"]",
+      "affected_roads_json": "[\"R3\", \"R1\"]"
+    },
+    {
+      "id": "DISASTER-57DC19",
+      "title": "lanslidexyzzz",
+      "description": "aaaaaaaaaaaaaaaaaa",
+      "disaster_type": "LANDSLIDE",
+      "severity": 0.75,
+      "status": "APPROVED",
+      "reported_by": "EOC Controller",
+      "reporter_type": "Admin",
+      "created_at": "2026-09-03T09:42:34.036302+00:00",
+      "updated_at": "2026-09-03T09:42:34.036302+00:00",
+      "reviewed_by": "Admin EOC",
+      "reviewed_at": "2026-09-03T09:42:34.036302+00:00",
+      "admin_notes": "Automatically approved (Admin submission)",
+      "affected_nodes_json": "[\"D\", \"Z\", \"E\"]",
+      "affected_roads_json": "[\"R6\", \"R8\"]"
+    },
+    {
+      "id": "DISASTER-37F217",
+      "title": "aaaaaaaaaa",
+      "description": "aaaaaaaaaaa",
+      "disaster_type": "FLOOD",
+      "severity": 0.75,
+      "status": "APPROVED",
+      "reported_by": "Civilian User",
+      "reporter_type": "Civilian",
+      "created_at": "2026-09-03T09:53:13.697340+00:00",
+      "updated_at": "2026-09-03T09:53:48.545863+00:00",
+      "reviewed_by": "Admin Controller",
+      "reviewed_at": "2026-09-03T09:53:48.545863+00:00",
+      "admin_notes": "Approved by EOC Admin. Graph risk recalculated.",
+      "affected_nodes_json": "[\"B\", \"E\", \"C\", \"Z\"]",
+      "affected_roads_json": "[\"R7\", \"R5\"]"
+    }
+  ],
+  "audit_logs": [
+    {
+      "id": 1,
+      "incident_id": "DISASTER-CCF97B",
+      "action": "CREATED",
+      "performed_by": "Civilian User John",
+      "performed_at": "2026-09-02T18:41:27.192369+00:00",
+      "notes": "Initial status: PENDING"
+    },
+    {
+      "id": 2,
+      "incident_id": "DISASTER-CCF97B",
+      "action": "APPROVED",
+      "performed_by": "Admin Controller",
+      "performed_at": "2026-09-02T18:41:27.250059+00:00",
+      "notes": "EOC Verified and Approved."
+    },
+    {
+      "id": 3,
+      "incident_id": "DISASTER-CCF97B",
+      "action": "RESOLVED",
+      "performed_by": "Admin Controller",
+      "performed_at": "2026-09-02T18:41:27.293775+00:00",
+      "notes": "Flood cleared."
+    },
+    {
+      "id": 4,
+      "incident_id": "DISASTER-8C0743",
+      "action": "CREATED",
+      "performed_by": "EOC Controller",
+      "performed_at": "2026-09-03T02:56:42.618627+00:00",
+      "notes": "Initial status: APPROVED"
+    },
+    {
+      "id": 5,
+      "incident_id": "DISASTER-8C0743",
+      "action": "RESOLVED",
+      "performed_by": "Admin Controller",
+      "performed_at": "2026-09-03T02:57:02.979674+00:00",
+      "notes": "Incident resolved & hazards cleared by field team."
+    },
+    {
+      "id": 6,
+      "incident_id": "DISASTER-46C42C",
+      "action": "CREATED",
+      "performed_by": "EOC Controller",
+      "performed_at": "2026-09-03T02:58:13.783752+00:00",
+      "notes": "Initial status: APPROVED"
+    },
+    {
+      "id": 7,
+      "incident_id": "DISASTER-46C42C",
+      "action": "RESOLVED",
+      "performed_by": "Admin Controller",
+      "performed_at": "2026-09-03T02:58:41.603181+00:00",
+      "notes": "Incident resolved & hazards cleared by field team."
+    },
+    {
+      "id": 8,
+      "incident_id": "DISASTER-889E6D",
+      "action": "CREATED",
+      "performed_by": "Test Civilian",
+      "performed_at": "2026-09-03T04:16:09.035720+00:00",
+      "notes": "Initial status: PENDING"
+    },
+    {
+      "id": 9,
+      "incident_id": "DISASTER-889E6D",
+      "action": "APPROVED",
+      "performed_by": "Admin Controller",
+      "performed_at": "2026-09-03T04:16:11.120220+00:00",
+      "notes": "Verified test report"
+    },
+    {
+      "id": 10,
+      "incident_id": "DISASTER-889E6D",
+      "action": "RESOLVED",
+      "performed_by": "Admin Controller",
+      "performed_at": "2026-09-03T04:16:13.162720+00:00",
+      "notes": "Cleared test hazard"
+    },
+    {
+      "id": 11,
+      "incident_id": "DISASTER-F28017",
+      "action": "CREATED",
+      "performed_by": "EOC Controller",
+      "performed_at": "2026-09-03T05:25:39.311669+00:00",
+      "notes": "Initial status: APPROVED"
+    },
+    {
+      "id": 12,
+      "incident_id": "DISASTER-57DC19",
+      "action": "CREATED",
+      "performed_by": "EOC Controller",
+      "performed_at": "2026-09-03T09:42:34.036302+00:00",
+      "notes": "Initial status: APPROVED"
+    },
+    {
+      "id": 13,
+      "incident_id": "DISASTER-37F217",
+      "action": "CREATED",
+      "performed_by": "Civilian User",
+      "performed_at": "2026-09-03T09:53:13.697340+00:00",
+      "notes": "Initial status: PENDING"
+    },
+    {
+      "id": 14,
+      "incident_id": "DISASTER-37F217",
+      "action": "APPROVED",
+      "performed_by": "Admin Controller",
+      "performed_at": "2026-09-03T09:53:48.545863+00:00",
+      "notes": "Approved by EOC Admin. Graph risk recalculated."
+    }
+  ]
+}

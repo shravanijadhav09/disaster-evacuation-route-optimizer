@@ -1,0 +1,115 @@
+@import "leaflet/dist/leaflet.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+@layer base {
+  body {
+    font-family: 'Public Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #fcf8fa;
+    color: #1b1b1d;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+
+/* Custom Scrollbar for a cleaner institutional look */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #c6c6cd;
+  border-radius: 4px;
+}
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: #76777d;
+}
+
+/* Leaflet map container styling */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  border-radius: 8px !important;
+  z-index: 10;
+  background-color: #f0edef !important;
+  font-family: inherit !important;
+}
+
+/* Custom map pulse animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    stroke-width: 6;
+  }
+  50% {
+    opacity: 0.75;
+    stroke-width: 9;
+  }
+}
+
+.route-polyline-glow {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+/* Ensure map fills container */
+.map-container-fill {
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+}
+
+/* Road label styling */
+.road-midpoint-badge-marker .leaflet-marker-icon {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.road-midpoint-badge-marker .leaflet-marker-icon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2) !important;
+  z-index: 1000;
+}
+
+/* Node label styling */
+.node-permanent-label-marker .leaflet-marker-icon {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.node-permanent-label-marker .leaflet-marker-icon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2) !important;
+  z-index: 1000;
+}
+
+/* Popup styling */
+.leaflet-popup-content-wrapper {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15) !important;
+  background: #ffffff !important;
+  color: #1b1b1d !important;
+}
+.leaflet-popup-content {
+  margin: 10px 14px !important;
+  line-height: 1.5 !important;
+}
+.leaflet-popup-tip {
+  background: #ffffff !important;
+}
